@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace cs_abs_enc_sprint.encapsulation
+namespace cs_abs_enc_sprint.abstraction
 {
     public class Functionality
     {
