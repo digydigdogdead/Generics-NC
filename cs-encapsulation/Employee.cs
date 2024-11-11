@@ -67,7 +67,18 @@ namespace cs_encapsulation
                     Tasks[i] = "Completed: " + Tasks[i];
                 }
             }
-        } 
+        }
+
+        public void CompleteTasks(List<string> CompletedTasks)
+        {
+            for (int i = 0; i < Tasks.Count;i++)
+            {
+                if (CompletedTasks.Contains(Tasks[i]))
+                {
+                    Tasks[i] = "Completed: " + Tasks[i];
+                }
+            }
+        }
 
 
         public void AddCustomer(string NewCustomer)
@@ -75,8 +86,19 @@ namespace cs_encapsulation
             Customers.Add(NewCustomer); 
         }
 
-        public void AddProject(string NewProject) {
+        public void AddCustomer(List<string> NewCustomers)
+        {
+            Customers.AddRange(NewCustomers);
+        }
+
+        public void AddProject(string NewProject) 
+        {
             Projects.Add(NewProject);        
+        }
+
+        public void AddProject(List<string> NewProjects)
+        {
+            Projects.AddRange(NewProjects);
         }
 
 
@@ -91,9 +113,16 @@ namespace cs_encapsulation
             MeetingSchedule.Add(MeetingDay); 
         }
 
-        public void AdjustSalary(double SalaryChange)
+        public void AddMeetingDay(List<string> NewMeetingDays)
         {
-            Salary += SalaryChange; 
+            MeetingSchedule.AddRange(NewMeetingDays);
+        }
+
+        public void AdjustSalary(double SalaryChange, bool IsPercentageRaise)
+        {
+            if (IsPercentageRaise) { Salary += SalaryChange * Salary; }
+            else
+            { Salary += SalaryChange; } 
         }
 
 

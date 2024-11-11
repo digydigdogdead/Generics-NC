@@ -20,32 +20,28 @@ namespace cs_abs_enc_sprint.encapsulation
             bob.AddProject("Project W");
             bob.ChangeDepartment("Human Resources");
             bob.AddMeetingDay("Thursday");
-            bob.AdjustSalary(3000); 
+            bob.AdjustSalary(3000, false); 
 
 
-            bob.EmployeeDetails(true); 
-            
+            bob.EmployeeDetails(true);
 
-            //employeeName = "Linda";
-            //employeeAge = 35;
-            //employeeSalary = 80000.0;
-            //employeeType = "Full-Time";
-            //employeeTasks = new string[] { "Task 7", "Task 2", "Task 5" };
-            //customerNames = new string[] { "Customer A", "Customer B", "Customer F" };
-            //projects = new string[] { "Project X" };
-            //department = "Finance";
-            //meetingSchedule = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday" };
 
-            //Console.WriteLine("Employee Name:      " + employeeName);
-            //Console.WriteLine("Employee Age:       " + employeeAge);
-            //Console.WriteLine("Employee Salary:    £" + employeeSalary);
-            //Console.WriteLine("Employee Type:      " + employeeType);
-            //Console.WriteLine("Tasks:              " + string.Join(", ", employeeTasks));
-            //Console.WriteLine("Customers:          " + string.Join(", ", customerNames));
-            //Console.WriteLine("Projects:           " + string.Join(", ", projects));
-            //Console.WriteLine("Department:         " + department);
-            //Console.WriteLine("Meeting Schedule:   " + string.Join(", ", meetingSchedule));
-            //Console.WriteLine("------------------------------------------------------------------------");
+            Employee linda = new Employee("Linda", 35, 80000.0, "Full-Time", ["Task 7", "Task 2", "Task 5"], ["Customer A", "Customer B", "Customer F"], ["Project X"], "Finance", ["Monday", "Tuesday", "Wednesday", "Thursday"]);
+            linda.EmployeeDetails(false);
+
+            linda.CompleteTasks(["Task 2", "Task 5"]);
+
+            linda.AddCustomer(["Customer E", "Customer T"]);
+
+            linda.AddProject(["Project W", "Project V", "Project U"]);
+
+            linda.ChangeDepartment("Finance");
+
+            linda.AddMeetingDay("Friday");
+            linda.AdjustSalary(0.03, true);
+
+            linda.EmployeeDetails(true);
+
 
             //// Completing tasks
             //for (int i = 0; i < employeeTasks.Length; i++)
