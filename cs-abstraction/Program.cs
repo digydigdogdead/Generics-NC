@@ -11,6 +11,12 @@ namespace cs_abstraction
         public static void Main(string[] args)
         {
             Console.WriteLine("The 'cs-abstraction' project is now running!");
+
+            Scanner bobScanner = new Scanner("Home office scanner");
+            Laptop bobLaptop = new Laptop("Work laptop"); 
+            bobLaptop.ConnectScanner(bobScanner);
+
+
         }
     }
 }
