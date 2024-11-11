@@ -8,7 +8,7 @@ namespace cs_encapsulation
 {
     internal class Customer
     {
-        private string Name { get; set; }
+        public string Name { get; private set; }
         private string Address { get; set; }
         public Customer(string name, string address = "New York") 
         {

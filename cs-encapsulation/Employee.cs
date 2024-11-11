@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace cs_encapsulation
+﻿namespace cs_encapsulation
 {
     internal class Employee
     {
@@ -24,11 +17,11 @@ namespace cs_encapsulation
 
         private string Department { get; set; }
 
-        private List<Weekdays> MeetingSchedule {  get; set; }
-        
-        public Employee(string name, int age, double salary, string type, List<string> tasks, List<Customer> customers, List<Project> projects, string department, List<Weekdays> meetingSchedule) 
+        private List<Weekdays> MeetingSchedule { get; set; }
+
+        public Employee(string name, int age, double salary, string type, List<string> tasks, List<Customer> customers, List<Project> projects, string department, List<Weekdays> meetingSchedule)
         {
-            this.Name = name; 
+            this.Name = name;
             this.Age = age;
             this.Salary = salary;
             this.Type = type;
@@ -45,14 +38,24 @@ namespace cs_encapsulation
             {
                 Console.WriteLine("--- UPDATED EMPLOYEE DETAILS ---");
             }
-            
+
             Console.WriteLine("Employee Name:      " + Name);
             Console.WriteLine("Employee Age:       " + Age);
             Console.WriteLine("Employee Salary:    £" + Salary);
             Console.WriteLine("Employee Type:      " + Type);
             Console.WriteLine("Tasks:              " + string.Join(", ", Tasks));
-            Console.WriteLine("Customers:          " + string.Join(", ", Customers));
-            Console.WriteLine("Projects:           " + string.Join(", ", Projects));
+            Console.Write("Customers:          ");
+            foreach (Customer customerName in Customers)
+            {
+                Console.Write(customerName.Name + " ");
+            }
+            Console.WriteLine();
+            Console.Write("Projects:           ");
+            foreach (Project projectName in Projects)
+            {
+                Console.Write(projectName.Name + " ");
+            }
+            Console.WriteLine();
             Console.WriteLine("Department:         " + Department);
             Console.WriteLine("Meeting Schedule:   " + string.Join(", ", MeetingSchedule));
             Console.WriteLine("------------------------------------------------------------------------");
@@ -71,7 +74,7 @@ namespace cs_encapsulation
 
         public void CompleteTasks(List<string> CompletedTasks)
         {
-            for (int i = 0; i < Tasks.Count;i++)
+            for (int i = 0; i < Tasks.Count; i++)
             {
                 if (CompletedTasks.Contains(Tasks[i]))
                 {
@@ -83,7 +86,7 @@ namespace cs_encapsulation
 
         public void AddCustomer(Customer NewCustomer)
         {
-            Customers.Add(NewCustomer); 
+            Customers.Add(NewCustomer);
         }
 
         public void AddCustomer(List<Customer> NewCustomers)
@@ -91,9 +94,9 @@ namespace cs_encapsulation
             Customers.AddRange(NewCustomers);
         }
 
-        public void AddProject(Project NewProject) 
+        public void AddProject(Project NewProject)
         {
-            Projects.Add(NewProject);        
+            Projects.Add(NewProject);
         }
 
         public void AddProject(List<Project> NewProjects)
@@ -110,7 +113,7 @@ namespace cs_encapsulation
 
         public void AddMeetingDay(Weekdays MeetingDay)
         {
-            MeetingSchedule.Add(MeetingDay); 
+            MeetingSchedule.Add(MeetingDay);
         }
 
         public void AddMeetingDay(List<Weekdays> NewMeetingDays)
@@ -122,7 +125,7 @@ namespace cs_encapsulation
         {
             if (IsPercentageRaise) { Salary += SalaryChange * Salary; }
             else
-            { Salary += SalaryChange; } 
+            { Salary += SalaryChange; }
         }
 
 

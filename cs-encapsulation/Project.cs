@@ -8,7 +8,7 @@ namespace cs_encapsulation
 {
     internal class Project
     {
-        private string Name { get; set; }
+        public string Name { get; private set; }
         //private string CompletionDate { get; set; }
 
         public Project(string name) {  Name = name; }
