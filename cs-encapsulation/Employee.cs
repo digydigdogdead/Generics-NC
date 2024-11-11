@@ -9,24 +9,24 @@ namespace cs_encapsulation
 {
     internal class Employee
     {
-        public string Name { get; set; }
+        private string Name { get; set; }
 
-        public int Age { get; set; }
+        private int Age { get; set; }
 
-        public double Salary { get; set; }
+        private double Salary { get; set; }
 
-        public string Type { get; set; }
-        public List<string> Tasks { get; set; }
+        private string Type { get; set; }
+        private List<string> Tasks { get; set; }
 
-        public List<string> Customers { get; set; }
+        private List<Customer> Customers { get; set; }
 
-        public List<string> Projects { get; set; }
+        private List<Project> Projects { get; set; }
 
-        public string Department { get; set; }
+        private string Department { get; set; }
 
-        public List<string> MeetingSchedule {  get; set; }
+        private List<Weekdays> MeetingSchedule {  get; set; }
         
-        public Employee(string name, int age, double salary, string type, List<string> tasks, List<string> customers, List<string> projects, string department, List<string> meetingSchedule) 
+        public Employee(string name, int age, double salary, string type, List<string> tasks, List<Customer> customers, List<Project> projects, string department, List<Weekdays> meetingSchedule) 
         {
             this.Name = name; 
             this.Age = age;
@@ -81,22 +81,22 @@ namespace cs_encapsulation
         }
 
 
-        public void AddCustomer(string NewCustomer)
+        public void AddCustomer(Customer NewCustomer)
         {
             Customers.Add(NewCustomer); 
         }
 
-        public void AddCustomer(List<string> NewCustomers)
+        public void AddCustomer(List<Customer> NewCustomers)
         {
             Customers.AddRange(NewCustomers);
         }
 
-        public void AddProject(string NewProject) 
+        public void AddProject(Project NewProject) 
         {
             Projects.Add(NewProject);        
         }
 
-        public void AddProject(List<string> NewProjects)
+        public void AddProject(List<Project> NewProjects)
         {
             Projects.AddRange(NewProjects);
         }
@@ -108,12 +108,12 @@ namespace cs_encapsulation
         }
 
 
-        public void AddMeetingDay(string MeetingDay)
+        public void AddMeetingDay(Weekdays MeetingDay)
         {
             MeetingSchedule.Add(MeetingDay); 
         }
 
-        public void AddMeetingDay(List<string> NewMeetingDays)
+        public void AddMeetingDay(List<Weekdays> NewMeetingDays)
         {
             MeetingSchedule.AddRange(NewMeetingDays);
         }
