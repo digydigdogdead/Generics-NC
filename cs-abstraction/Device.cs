@@ -20,5 +20,24 @@ namespace cs_abstraction
             this.InstalledApps = new List<IRunnable>(); 
         }
 
+        public virtual void InstallApp(App app)
+        {
+            this.InstalledApps.Add(app);
+            app.SetDevice(this);
+            if (app.Device == this)
+            {
+                Console.WriteLine("Installation successful");
+            }
+            else { Console.WriteLine("Installation unsuccessful"); }
+        }
+
+        public void RunDevice()
+        {
+            foreach (App app in InstalledApps)
+            {
+                app.Run(this);
+            }
+        }
+
     }
 }

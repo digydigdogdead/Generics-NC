@@ -13,5 +13,11 @@ namespace cs_abstraction
 
         }
 
+        public override void InstallApp(App app)
+        {
+            Console.WriteLine($"Cannot install applications on {this.Name}");
+
+        }
+
     }
 }

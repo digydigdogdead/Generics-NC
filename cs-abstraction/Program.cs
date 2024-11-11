@@ -25,11 +25,11 @@ namespace cs_abstraction
 
             //Console.WriteLine(appThatExists.Device.Name);
 
-            bobLaptop.InstalledApps.Add(appThatExists);
-            appThatExists.SetDevice(bobLaptop);
+            bobLaptop.InstallApp(appThatExists);    
             appThatExists.Run(bobLaptop);
-            appThatExists.Run(bobScanner); 
-
+            appThatExists.Run(bobScanner);
+            bobLaptop.RunDevice();
+            bobScanner.InstallApp(appThatExists); 
 
         }
     }
