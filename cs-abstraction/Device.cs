@@ -12,11 +12,13 @@ namespace cs_abstraction
 
         public Boolean IsConnected { get; set; } 
 
+        public List<IRunnable> InstalledApps { get; set; }
+
         public Device(string name)
         {
             this.Name = name;
+            this.InstalledApps = new List<IRunnable>(); 
         }
-
 
     }
 }

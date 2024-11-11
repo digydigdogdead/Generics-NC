@@ -13,17 +13,23 @@ namespace cs_abstraction
             //Console.WriteLine("The 'cs-abstraction' project is now running!");
 
             Scanner bobScanner = new Scanner("Home office scanner");
-            //Laptop bobLaptop = new Laptop("Work laptop"); 
-            //bobLaptop.ConnectScanner(bobScanner);
+            Laptop bobLaptop = new Laptop("Work laptop"); 
+            bobLaptop.ConnectScanner(bobScanner);
 
             App appThatExists = App.GetApp("render");
             App appThatDoesntExist = App.GetApp("recipes");
 
-            Console.WriteLine(appThatExists.Name);
+            //Console.WriteLine(appThatExists.Name);
 
             appThatExists.SetDevice(bobScanner);
 
-            Console.WriteLine(appThatExists.Device.Name);
+            //Console.WriteLine(appThatExists.Device.Name);
+
+            bobLaptop.InstalledApps.Add(appThatExists);
+            appThatExists.SetDevice(bobLaptop);
+            appThatExists.Run(bobLaptop);
+            appThatExists.Run(bobScanner); 
+
 
         }
     }
