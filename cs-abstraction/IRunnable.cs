@@ -8,7 +8,8 @@ namespace cs_abstraction
 {
     internal interface IRunnable
     {
-        void Run(bool connected)
+        // bool connected? 
+        void Run(Device device)
         {
 
         } 

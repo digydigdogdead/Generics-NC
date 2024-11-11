@@ -10,27 +10,38 @@ namespace cs_abstraction
     {
         public static void Main(string[] args)
         {
-            //Console.WriteLine("The 'cs-abstraction' project is now running!");
 
-            Scanner bobScanner = new Scanner("Home office scanner");
-            Laptop bobLaptop = new Laptop("Work laptop"); 
-            bobLaptop.ConnectScanner(bobScanner);
+            Scanner bobScanner = new Scanner("bobScanner");
+            Laptop bobLaptop = new Laptop("bobLaptop");
+            Smartphone bobSmartphone = new Smartphone("bobSmartphone");
 
-            App appThatExists = App.GetApp("render");
-            App appThatDoesntExist = App.GetApp("recipes");
+            List<Device> devices = new List<Device>
+            {
+                bobScanner,
+                bobLaptop,
+                bobSmartphone
+            };
 
-            //Console.WriteLine(appThatExists.Name);
+            devices.ForEach(device => device.RunDevice());
 
-            appThatExists.SetDevice(bobScanner);
+            foreach (Device item in devices)
+            {
+                item.InstallApp(App.GetApp("RENDER"));
+                item.InstallApp(App.GetApp("WELCOME"));
+                item.InstallApp(App.GetApp("BACKUP"));
+                item.InstallApp(App.GetApp("DATA"));
+            }
 
-            //Console.WriteLine(appThatExists.Device.Name);
+            bobLaptop.Connect(); 
+            bobSmartphone.Connect();
 
-            bobLaptop.InstallApp(appThatExists);    
-            appThatExists.Run(bobLaptop);
-            appThatExists.Run(bobScanner);
-            bobLaptop.RunDevice();
-            bobScanner.InstallApp(appThatExists); 
+
+            foreach (Device item in devices)
+            {
+                item.RunDevice();
+            }
+
 
         }
-    }
+        }
 }

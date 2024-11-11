@@ -33,7 +33,7 @@ namespace cs_abstraction
 
         public void RunDevice()
         {
-            foreach (App app in InstalledApps)
+            foreach (IRunnable app in InstalledApps)
             {
                 app.Run(this);
             }

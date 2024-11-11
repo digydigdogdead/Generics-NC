@@ -10,7 +10,7 @@ namespace cs_abstraction
     {
         public Laptop(string name) : base(name)
         {
-
+            this.InstalledApps.Add(new Operation("Install Peripheral", $"Installing peripheral on {this.Name}...", false)); 
         }
 
         public void ConnectScanner(Scanner scanner)
