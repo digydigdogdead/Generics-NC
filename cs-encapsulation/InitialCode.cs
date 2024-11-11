@@ -34,114 +34,18 @@ namespace cs_abs_enc_sprint.encapsulation
             linda.AddCustomer(["Customer E", "Customer T"]);
 
             linda.AddProject(["Project W", "Project V", "Project U"]);
-
             linda.ChangeDepartment("Finance");
-
             linda.AddMeetingDay("Friday");
             linda.AdjustSalary(0.03, true);
-
             linda.EmployeeDetails(true);
 
-
-            //// Completing tasks
-            //for (int i = 0; i < employeeTasks.Length; i++)
-            //{
-            //    if (employeeTasks[i] == "Task 2" || employeeTasks[i] == "Task 5")
-            //    {
-            //        employeeTasks[i] = "Completed: " + employeeTasks[i];
-            //    }
-            //}
-
-            //// Adding new customer(s)
-            //Array.Resize(ref customerNames, customerNames.Length + 2);
-            //customerNames[customerNames.Length - 2] = "Customer E";
-            //customerNames[customerNames.Length - 1] = "Customer T";
-
-            //// Assigning new project(s)
-            //Array.Resize(ref projects, projects.Length + 3);
-            //projects[projects.Length - 3] = "Project W";
-            //projects[projects.Length - 2] = "Project V";
-            //projects[projects.Length - 1] = "Project U";
-
-            //// Changing department
-            //department = "Finance";
-
-            //// Adding meeting day(s)
-            //meetingSchedule.Add("Friday");
-
-            //// Increasing salary
-            //employeeSalary += employeeSalary * 0.03;
-
-            //Console.WriteLine("--- UPDATED EMPLOYEE DETAILS ---");
-            //Console.WriteLine("Employee Name:      " + employeeName);
-            //Console.WriteLine("Employee Age:       " + employeeAge);
-            //Console.WriteLine("Employee Salary:    £" + employeeSalary);
-            //Console.WriteLine("Employee Type:      " + employeeType);
-            //Console.WriteLine("Tasks:              " + string.Join(", ", employeeTasks));
-            //Console.WriteLine("Customers:          " + string.Join(", ", customerNames));
-            //Console.WriteLine("Projects:           " + string.Join(", ", projects));
-            //Console.WriteLine("Department:         " + department);
-            //Console.WriteLine("Meeting Schedule:   " + string.Join(", ", meetingSchedule));
-            //Console.WriteLine("------------------------------------------------------------------------");
-
-            //employeeName = "Sal";
-            //employeeAge = 45;
-            //employeeSalary = 23500.0;
-            //employeeType = "Part-Time";
-            //employeeTasks = new string[] { "Task 5" };
-            //customerNames = new string[] { "Customer Q" };
-            //projects = new string[] { "Project A" };
-            //department = "Engineering";
-            //meetingSchedule = new List<string> { "Friday" };
-
-            //Console.WriteLine("Employee Name:      " + employeeName);
-            //Console.WriteLine("Employee Age:       " + employeeAge);
-            //Console.WriteLine("Employee Salary:    £" + employeeSalary);
-            //Console.WriteLine("Employee Type:      " + employeeType);
-            //Console.WriteLine("Tasks:              " + string.Join(", ", employeeTasks));
-            //Console.WriteLine("Customers:          " + string.Join(", ", customerNames));
-            //Console.WriteLine("Projects:           " + string.Join(", ", projects));
-            //Console.WriteLine("Department:         " + department);
-            //Console.WriteLine("Meeting Schedule:   " + string.Join(", ", meetingSchedule));
-            //Console.WriteLine("------------------------------------------------------------------------");
-
-            //// Completing tasks
-            //for (int i = 0; i < employeeTasks.Length; i++)
-            //{
-            //    if (employeeTasks[i] == "Task 5")
-            //    {
-            //        employeeTasks[i] = "Completed: " + employeeTasks[i];
-            //        break;
-            //    }
-            //}
-
-            //// Adding new customer(s)
-            ///* No new customers for Sal */
-
-            //// Assigning new project(s)
-            //Array.Resize(ref projects, projects.Length + 1);
-            //projects[projects.Length - 1] = "Project B";
-
-            //// Changing department
-            ///* No new department for Sal */
-
-            //// Adding meeting day(s)
-            //meetingSchedule.Add("Thursday");
-
-            //// Decreasing salary
-            //employeeSalary -= 500;
-
-            //Console.WriteLine("--- UPDATED EMPLOYEE DETAILS ---");
-            //Console.WriteLine("Employee Name:      " + employeeName);
-            //Console.WriteLine("Employee Age:       " + employeeAge);
-            //Console.WriteLine("Employee Salary:    £" + employeeSalary);
-            //Console.WriteLine("Employee Type:      " + employeeType);
-            //Console.WriteLine("Tasks:              " + string.Join(", ", employeeTasks));
-            //Console.WriteLine("Customers:          " + string.Join(", ", customerNames));
-            //Console.WriteLine("Projects:           " + string.Join(", ", projects));
-            //Console.WriteLine("Department:         " + department);
-            //Console.WriteLine("Meeting Schedule:   " + string.Join(", ", meetingSchedule));
-            //Console.WriteLine("------------------------------------------------------------------------");
+            Employee sal = new Employee("Sal", 45, 23500.0, "Part-Time", ["Task 5"], ["Customer Q"], ["Project A"], "Engineering", ["Friday"]);
+            sal.EmployeeDetails(false);
+            sal.CompleteTasks("Task 5");
+            sal.AddProject("Project B");
+            sal.AddMeetingDay("Thursday");
+            sal.AdjustSalary(-500, false);
+            sal.EmployeeDetails(true);
         }
     }
 }
