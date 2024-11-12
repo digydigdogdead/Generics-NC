@@ -8,8 +8,7 @@ namespace Shapes
 {
     public class Prism : Shape3D
     {
-        public double Height { get; set; }
-
+        private double Height { get; set; }
         public Prism(Triangle triangle, double height)
         {
             BaseShape = triangle;

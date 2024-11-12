@@ -8,7 +8,7 @@ namespace Shapes
 {
     public class Cylinder : Shape3D
     { 
-        public double Height { get; set; }
+        private double Height { get; set; }
     
         public Cylinder(Circle circle, double height)
         {

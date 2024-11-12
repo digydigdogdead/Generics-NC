@@ -8,9 +8,9 @@ namespace Vehicles
 {
     internal class Engine
     {
-        public bool Running { get; set; }
-        public int HorsePower { get; set; }
-        public FuelType FuelType { get; set; }
+        protected internal bool Running { get; set; }
+        protected internal int HorsePower { get; set; }
+        protected internal FuelType FuelType { get; set; }
 
         public Engine()
         {

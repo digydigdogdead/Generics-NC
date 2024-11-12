@@ -8,7 +8,7 @@ namespace Shapes
 {
     public class Cone : Shape3D
     {
-        public double Height { get; set; }
+        private double Height { get; set; }
         public Cone(Circle circle, double height)
         {
             BaseShape = circle;
