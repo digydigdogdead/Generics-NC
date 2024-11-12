@@ -4,7 +4,14 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Car myCar = new Car("Ferrari", "Testorossa", new CarEngine());
+            Motorcycle myBike = new Motorcycle("Yamaha", "E-Saxophone", new MotorcycleEngine(), true);
+
+            myCar.StartEngine();
+            myBike.StartEngine();
+
+            myCar.Drive();
+            myBike.Drive();
         }
     }
 }

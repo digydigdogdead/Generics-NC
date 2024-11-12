@@ -10,8 +10,8 @@ namespace Vehicles
     {
         public CarEngine()
         {
-            Horsepower = 30;
-            FuelType = FuelType.UNLEADED;
+            HorsePower = 30;
+            FuelType = FuelType.Unleaded;
         }
     }
 }
