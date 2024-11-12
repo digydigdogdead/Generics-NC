@@ -8,8 +8,8 @@ namespace Shapes
 {
     public class Rectangle : Shape
     {
-        private double Length { get; set; }
-        private double Width { get; set; }
+        protected internal double Length { get; set; }
+        protected internal double Width { get; set; }
 
         public Rectangle(double length, double width)
         {

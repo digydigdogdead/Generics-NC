@@ -55,11 +55,12 @@
 
             //Console.WriteLine(circularPrism.CalculateVolume());
 
-            RegularOctagon myOctagon = new RegularOctagon(2);
-            Console.WriteLine(myOctagon.CalculateArea());
+            Octahedron d8 = new Octahedron(new Triangle(2, 2));
+            Console.WriteLine(d8.CalculateVolume());
+            Console.WriteLine(d8.Roll());
+            Console.WriteLine(d8.Roll());
 
-            Prism octagonalPrism = new Prism(myOctagon, 2);
-            Console.WriteLine(octagonalPrism.CalculateVolume());
+
         }
     }
 }

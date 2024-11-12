@@ -8,9 +8,9 @@ namespace Shapes
 {
     public class Triangle : Shape
     {
-        private double BaseLength { get; set; }
+        protected internal double BaseLength { get; set; }
 
-        private double Height { get; set; }
+        protected internal double Height { get; set; }
 
         public Triangle(double baseLength, double height)
         {

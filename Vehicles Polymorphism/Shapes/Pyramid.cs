@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shapes
 {
-    public class Pyramid : Shape3D
+    public class Pyramid : Shape3D, IRollable
     {
         private double Height { get; set; }
 
@@ -20,6 +20,12 @@ namespace Shapes
         {
             double baseArea = BaseShape.CalculateArea();
             return (baseArea * Height) / 3;
+        }
+
+        public int Roll()
+        {
+            Random random = new Random();
+            return random.Next(0, 4) + 1;
         }
     }
 }
