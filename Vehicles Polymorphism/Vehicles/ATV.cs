@@ -6,19 +6,16 @@ using System.Threading.Tasks;
 
 namespace Vehicles
 {
-    internal class Car : Vehicle, IFourWheeled
+    class ATV : Vehicle, IFourWheeled
     {
-        public Car(string make, string model, Engine engineType, bool isFourWheelDrive) : base(make, model, engineType)
-        {
-            this.IsFourWheelDrive = isFourWheelDrive;
-        }
-
         public bool IsFourWheelDrive { get; set; }
 
-        public void ChangeTyres(string tyreManufacturer)
+        public ATV(string make, string model, Engine engineType, bool isFourWheelDrive) : base(make, model, engineType)
         {
-            Console.WriteLine("Tyres changed to " + tyreManufacturer + " tyres. Also, this is a car.");
+         this.IsFourWheelDrive = isFourWheelDrive;
         }
+
+    
 
         protected override void Accelerate()
         {
@@ -35,5 +32,11 @@ namespace Vehicles
                 Console.WriteLine($"{message}{((EngineType.HorsePower * fuelMod) * Math.Exp(Math.Sqrt(i)) / 2):F2}mph");
             }
         }
+
+        public void ChangeTyres(string tyreManufacturer)
+        {
+            Console.WriteLine("Tyres changed to " + tyreManufacturer + " tyres.");
+        }
+
     }
 }
