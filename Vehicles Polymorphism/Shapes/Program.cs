@@ -5,10 +5,10 @@
         static void Main(string[] args)
         {
             List<Shape> shapes = new List<Shape>{
-            new Circle(5),
-            new Rectangle(2, 5),
-            new Triangle(3, 7)
-        };
+                new Circle(5),
+                new Rectangle(2, 5),
+                new Triangle(3, 7)
+            };
 
             foreach (Shape shape in shapes)
             {
@@ -25,9 +25,9 @@
                     shapes3d.Add(new Cylinder(circle, 5));
                     shapes3d.Add(new Cone(circle, 5));
                 }
-                else if (shape is Triangle triangle) 
+                else if (shape is Triangle triangle)
                 {
-                   
+
                     shapes3d.Add(new Prism(triangle, 5));
                     shapes3d.Add(new Pyramid(triangle, 5));
                 }
@@ -38,6 +38,22 @@
                 shape3d.BaseShape.GetType().Name + " base | Volume = " +
                 shape3d.CalculateVolume());
             }
+
+            Prism regularPrism = new Prism(new Triangle(2, 2), 2);
+
+            Prism circularPrism = new Prism(new Circle(2), 2);
+
+            double regularPrismVolume = regularPrism.CalculateVolume();
+            Console.WriteLine(regularPrismVolume);
+
+            double circularPrismVolume = circularPrism.CalculateVolume();
+            Console.WriteLine(circularPrismVolume);
+
+            Prism rectangularPrism = new Prism(new Rectangle(2, 2), 2);
+            double rectangularPrismVolume = rectangularPrism.CalculateVolume();
+            Console.WriteLine(rectangularPrismVolume);
+
+            Console.WriteLine(circularPrism.CalculateVolume());
         }
     }
 }

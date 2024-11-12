@@ -10,6 +10,7 @@ namespace Vehicles
     {
         Unleaded,
         Leaded,
-        Diesel
+        Diesel,
+        SuperUnleaded
     }
 }

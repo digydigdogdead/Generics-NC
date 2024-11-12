@@ -15,6 +15,12 @@ namespace Shapes
             Height = height;
         }
 
+        public Prism(Shape shape, double height)
+        {
+            BaseShape = shape;
+            Height = height;
+        }
+
         public override double CalculateVolume()
         {
             double baseArea = BaseShape.CalculateArea();
