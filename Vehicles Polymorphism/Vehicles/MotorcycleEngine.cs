@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Vehicles
 {
-    internal class Car : Vehicle
+    internal class MotorcycleEngine : Engine
     {
-        public Car(string make, string model, Engine engineType) : base(make, model, engineType)
+        public MotorcycleEngine()
         {
-
+            Horsepower = 20;
+            FuelType = FuelType.LEADED;
         }
     }
 }

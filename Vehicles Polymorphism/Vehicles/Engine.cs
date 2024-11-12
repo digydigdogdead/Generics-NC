@@ -12,10 +12,15 @@ namespace Vehicles
         public int Horsepower { get; set; }
         public FuelType FuelType { get; set; }
 
-        public Engine(int horsepower, FuelType fuel)
+        public Engine()
         {
-            this.Horsepower = horsepower;
-            this.FuelType = fuel;
+            Horsepower = 10;
+            FuelType = FuelType.DIESEL;
+        }
+
+        public void Start()
+        {
+            Running = true;
         }
     }
 }
