@@ -8,8 +8,8 @@ namespace Vehicles
 {
     internal enum FuelType
     {
-        UNLEADED,
-        LEADED,
-        DIESEL
+        Unleaded,
+        Leaded,
+        Diesel
     }
 }

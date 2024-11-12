@@ -9,13 +9,13 @@ namespace Vehicles
     internal class Engine
     {
         public bool Running { get; set; }
-        public int Horsepower { get; set; }
+        public int HorsePower { get; set; }
         public FuelType FuelType { get; set; }
 
         public Engine()
         {
-            Horsepower = 10;
-            FuelType = FuelType.DIESEL;
+            HorsePower = 10;
+            FuelType = FuelType.Diesel;
         }
 
         public void Start()

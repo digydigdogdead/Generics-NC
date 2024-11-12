@@ -10,8 +10,8 @@ namespace Vehicles
     {
         public MotorcycleEngine()
         {
-            Horsepower = 20;
-            FuelType = FuelType.LEADED;
+            HorsePower = 20;
+            FuelType = FuelType.Leaded;
         }
     }
 }
