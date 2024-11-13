@@ -71,10 +71,15 @@ namespace Shapes
             //RegularPentagon testPent = new RegularPentagon(3);
             //Console.WriteLine(testPent.CalculateArea());
 
-            RegularDodecahedron d12 = new RegularDodecahedron(new RegularPentagon(1));
-            Console.WriteLine(d12.CalculateVolume());
-            Console.WriteLine(d12.Roll());
-            Console.WriteLine(d12.Roll());
+            //RegularDodecahedron d12 = new RegularDodecahedron(new RegularPentagon(1));
+            //Console.WriteLine(d12.CalculateVolume());
+            //Console.WriteLine(d12.Roll());
+            //Console.WriteLine(d12.Roll());
+
+            RegularIcosahedron d20 = new RegularIcosahedron(new Triangle(3, 2.6));
+            Console.WriteLine(d20.CalculateVolume());
+            Console.WriteLine(d20.Roll());
+            Console.WriteLine(d20.Roll());
         }
     }
 }
