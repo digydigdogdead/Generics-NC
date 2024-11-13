@@ -55,12 +55,18 @@
 
             //Console.WriteLine(circularPrism.CalculateVolume());
 
-            Octahedron d8 = new Octahedron(new Triangle(2, 2));
-            Console.WriteLine(d8.CalculateVolume());
-            Console.WriteLine(d8.Roll());
-            Console.WriteLine(d8.Roll());
+            //Octahedron d8 = new Octahedron(new Triangle(2, 2));
+            //Console.WriteLine(d8.CalculateVolume());
+            //Console.WriteLine(d8.Roll());
+            //Console.WriteLine(d8.Roll());
 
+            //PentagonalTrapezohedron d10 = new PentagonalTrapezohedron(new Kite(3, 6, 30));
+            //Console.WriteLine(d10.CalculateVolume());
+            //Console.WriteLine(d10.Roll());
+            //Console.WriteLine(d10.Roll());
 
+            RegularPentagon testPent = new RegularPentagon(3);
+            Console.WriteLine(testPent.CalculateArea());
         }
     }
 }
