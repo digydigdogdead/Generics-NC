@@ -1,4 +1,7 @@
-﻿namespace Shapes
+﻿using Shapes._3D_Shapes;
+using System.ComponentModel.Design.Serialization;
+
+namespace Shapes
 {
     internal class Program
     {
@@ -65,8 +68,13 @@
             //Console.WriteLine(d10.Roll());
             //Console.WriteLine(d10.Roll());
 
-            RegularPentagon testPent = new RegularPentagon(3);
-            Console.WriteLine(testPent.CalculateArea());
+            //RegularPentagon testPent = new RegularPentagon(3);
+            //Console.WriteLine(testPent.CalculateArea());
+
+            RegularDodecahedron d12 = new RegularDodecahedron(new RegularPentagon(1));
+            Console.WriteLine(d12.CalculateVolume());
+            Console.WriteLine(d12.Roll());
+            Console.WriteLine(d12.Roll());
         }
     }
 }
