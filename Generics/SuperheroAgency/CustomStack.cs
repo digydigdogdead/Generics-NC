@@ -1,28 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace SuperheroAgency;
 
-namespace SuperheroAgency
+internal class CustomStack<T>
 {
-    internal class CustomStack<T>
+    private T[] items = Array.Empty<T>();
+    public int Length() { return items.Length; }
+    
+    public void Push(T item)
     {
-        private T[] items = Array.Empty<T>();
-        public int Length() { return items.Length; }
-        
-        public void Push(T item)
-        {
-            Array.Resize(ref items, items.Length + 1);
-            items[items.Length - 1] = item;
-        }
+        Array.Resize(ref items, items.Length + 1);
+        items[items.Length - 1] = item;
+    }
 
-        public T Pop()
-        {
-            T result = items[items.Length - 1];
-            Array.Resize(ref items, items.Length - 1);
-            return result;
-        }
+    public T Pop()
+    {
+        T result = items[items.Length - 1];
+        Array.Resize(ref items, items.Length - 1);
+        return result;
     }
 }
