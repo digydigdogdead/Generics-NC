@@ -80,7 +80,7 @@ internal class Program
         // Expanded Superhero Agency Task
 
         Mystic chris = new Mystic("Chris", "Chris", 42, Alignment.EVIL, 42, 42, 42);
-        Mystic chris2 = new Mystic("Chris", "Chris", 42, Alignment.EVIL, 42, 42, 42);
+        Mystic chris2 = new Mystic("Chris2", "Chris", 42, Alignment.EVIL, 42, 42, 1);
         Gadgeteer carlyle = new Gadgeteer("Carlyle", "Laurent", 18, Alignment.GOOD, "A live frog", 4);
 
         SuperheroAgency carlylesAgency = new SuperheroAgency();
@@ -88,6 +88,14 @@ internal class Program
         carlylesAgency.Add(chris2);
         carlylesAgency.Add(carlyle);
 
-        Console.WriteLine(carlylesAgency.GetSuperheroesByPowers<IStrength, ITech>().Count);
+        ReconMission<IFly> testMission = new ReconMission<IFly>("Prague", 2000, 10);
+
+        testMission.HeroesDeployed.Add(chris2);
+        testMission.PerformMission();
+
+        testMission.HeroesDeployed.Add(chris);
+        testMission.PerformMission();
+
+
     }
 }

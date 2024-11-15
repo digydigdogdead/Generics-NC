@@ -23,4 +23,17 @@ public class SuperheroAgency
     {
         return AllSuperheroes.Where(s => s is T && s is U).ToList();
     }
+
+    public List<Superhero> GetSuperheroesByAlignment(Alignment alignment)
+    {
+        return AllSuperheroes.Where(s => s.Alignment == alignment).ToList();
+    }
+
+    public void PrintAllMonologues()
+    {
+        foreach (var superhero in AllSuperheroes)
+        {
+            Console.WriteLine($"{superhero.Alias}: \"" + superhero.Monologue() + "\"");
+        }
+    }
 }

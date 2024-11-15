@@ -2,7 +2,7 @@
 
 public class CombatMission<T> : Mission<T>
 {
-    public CombatMission(string location, int reward) : base(location, reward)
+    public CombatMission(string location, int reward, int difficulty) : base(location, reward, difficulty)
     {
     }
 }

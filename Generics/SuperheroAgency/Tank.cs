@@ -14,4 +14,16 @@ public class Tank : Superhero, IFly, IStrength
         MaxHeight = maxHeight;
         StrengthLevel = strengthLevel;
     }
+
+    public override string Monologue()
+    {
+        if (this.Alignment == Alignment.GOOD)
+        {
+            return "I can shield all these innocent citizens from harm using my bulky body.";
+        }
+        else
+        {
+            return "I totally *could* shield these citizens, as my body is very bulky, but I won't, because I'm actually evil.";
+        }
+    }
 }

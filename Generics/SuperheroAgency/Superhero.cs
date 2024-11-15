@@ -14,4 +14,6 @@ public abstract class Superhero
         Age = age;
         Alignment = alignment;
     }
+
+    public abstract string Monologue();
 }

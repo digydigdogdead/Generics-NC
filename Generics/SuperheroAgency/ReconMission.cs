@@ -2,7 +2,7 @@
 
 public class ReconMission<T> : Mission<T> where T : IFly
 {
-    public ReconMission(string location, int reward) : base(location, reward)
+    public ReconMission(string location, int reward, int difficulty) : base(location, reward, difficulty)
     {
     }
 }

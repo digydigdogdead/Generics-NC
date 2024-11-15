@@ -12,4 +12,15 @@ public class Gadgeteer : Superhero, ITech, IStrength
         Gadget = gadget;
         StrengthLevel = strengthLevel;
     }
+
+    public override string Monologue()
+    {
+        if (this.Alignment == Alignment.GOOD)
+        {
+            return "These gadgets will contribute to global sustainable farming.";
+        } else
+        {
+            return "These gadgets will primarily be used to poison water supplies, mostly just cus I think that's funny. I'm evil.";
+        }
+    }
 }
