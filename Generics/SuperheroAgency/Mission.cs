@@ -1,6 +1,4 @@
-﻿using System.Data.Common;
-
-namespace SuperheroAgency;
+﻿namespace SuperheroAgency;
 
 public abstract class Mission<T> 
 {
@@ -18,23 +16,17 @@ public abstract class Mission<T>
         Difficulty = difficulty;
     }
 
-    public void PerformMission()
+    public void ResolveMission(ref int agencyFunds, bool isSuccessful)
     {
-        int completeness = 0;
-        foreach (var hero in HeroesDeployed)
+        if (isSuccessful)
         {
-            if (hero is IStrength)
-            {
-                completeness += ((IStrength)hero).StrengthLevel;
-            } else if (hero is ITelepathy)
-            {
-                completeness += ((ITelepathy)hero).PowerLevel;
-            }
+            this.IsCompleted = true;
+            Console.WriteLine("Mission complete. Well done heroes.");
+            agencyFunds += Reward;
         }
-
-        if (completeness >= Difficulty) { this.IsCompleted = true; }
-
-        if (IsCompleted) Console.WriteLine("Mission complete. Well done heroes.");
-        if (!IsCompleted) Console.WriteLine("You failed. The hostages all exploded.");
+        else
+        {
+            Console.WriteLine("You failed. The hostages all exploded.");
+        }
     }
 }

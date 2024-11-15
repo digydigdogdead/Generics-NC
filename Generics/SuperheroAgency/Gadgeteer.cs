@@ -1,16 +1,16 @@
 ﻿namespace SuperheroAgency;
 
-public class Gadgeteer : Superhero, ITech, IStrength
+public class Gadgeteer : Superhero, ITech
 {
     public string Gadget { get; set; }
-    public int StrengthLevel { get; set; }
+    public int HackingLevel { get; set; }
 
     public Gadgeteer(string secretIdentity, string alias, int age, Alignment alignment,
-                     string gadget, int strengthLevel)
+                     string gadget, int hackingLevel)
         : base(secretIdentity, alias, age, alignment)
     {
         Gadget = gadget;
-        StrengthLevel = strengthLevel;
+        HackingLevel = hackingLevel;
     }
 
     public override string Monologue()

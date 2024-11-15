@@ -91,11 +91,14 @@ internal class Program
         ReconMission<IFly> testMission = new ReconMission<IFly>("Prague", 2000, 10);
 
         testMission.HeroesDeployed.Add(chris2);
-        testMission.PerformMission();
+        carlylesAgency.PerformMission(testMission);
+        Console.WriteLine(carlylesAgency.AgencyFunds);
 
         testMission.HeroesDeployed.Add(chris);
-        testMission.PerformMission();
+        carlylesAgency.PerformMission(testMission);
+        Console.WriteLine(carlylesAgency.AgencyFunds);
 
-
+        carlylesAgency.PerformMission(testMission);
+        Console.WriteLine(carlylesAgency.AgencyFunds);
     }
 }
