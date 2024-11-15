@@ -16,14 +16,23 @@ internal class Program
         //    Console.WriteLine(item);
         //}
 
-        var myBooks = new CustomStack<string>();
+        //var myBooks = new CustomStack<string>();
 
-        myBooks.Push("Book 1");
-        myBooks.Push("Book 2");
-        myBooks.Push("Book 3");
+        //myBooks.Push("Book 1");
+        //myBooks.Push("Book 2");
+        //myBooks.Push("Book 3");
 
-        Console.WriteLine(myBooks.Pop()); // Book 3
-        Console.WriteLine(myBooks.Length());
+        //Console.WriteLine(myBooks.Pop()); // Book 3
+        //Console.WriteLine(myBooks.Length());
+
+        var strandedCat = new RescueMission<IFly>("tree", 50);
+        var bugInMyCode = new RescueMission<ITech>("zoom", 1000);
+        var armWrestlingCompetition = new CombatMission<IStrength>("beach", 20);
+
+        var reyzhen = new Mystic("Michael", "Reyzhen", 7000, Alignment.GOOD, 13, 5000, 3);
+        strandedCat.HeroesDeployed.Add(reyzhen); // All good
+
+        var rich = new Gadgeteer("Rich", "The Developer", 33, Alignment.EVIL, "Regular belt that holds up trousers", 8);
 
         static T GetLast<T>(ICollection<T> collection)
         {
