@@ -4,21 +4,32 @@
     {
         static void Main(string[] args)
         {
-            int[] intArray = { 1, 5, 2, 8, 6 };
-            Console.WriteLine(GetLast(intArray)); // 6
+            //Stack<string> stack = new Stack<string>();
+            //stack.Push("Hardboiled wonderland and the end of the world");
+            //stack.Push("The Three-Body Problem");
+            //stack.Push("Batman/Elmer Fudd crossover");
+            //stack.Pop();
+            //Console.WriteLine(stack.Count);
 
-            double[] doubleArray = { 10.5, 60.5, 2.2, 8.76, 6.1111 };
-            Console.WriteLine(GetLast(doubleArray)); // 6.1111
+            //foreach (var item in stack)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
-            string[] stringArray = { "hello", "world", "it's", "northcoders!" };
-            Console.WriteLine(GetLast(stringArray));
+            var myBooks = new CustomStack<string>();
 
-        }
+            myBooks.Push("Book 1");
+            myBooks.Push("Book 2");
+            myBooks.Push("Book 3");
 
-        static T GetLast<T>(ICollection<T> collection)
-        {
-            T[] array = collection.ToArray();
-            return array[array.Length - 1];
+            Console.WriteLine(myBooks.Pop()); // Book 3
+            Console.WriteLine(myBooks.Length());
+
+            static T GetLast<T>(ICollection<T> collection)
+            {
+                T[] array = collection.ToArray();
+                return array[array.Length - 1];
+            }
         }
     }
 }
